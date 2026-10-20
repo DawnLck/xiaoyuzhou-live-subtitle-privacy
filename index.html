@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>小宇宙跟读 · 隐私政策</title>
+<style>
+  :root {
+    --bg: #ffffff; --panel: #f7f8fa; --ink: #1d1d1f; --muted: #6e6e73;
+    --line: #e6e7ea; --brand: #16b0ea; --code: #f2f3f5;
+  }
+  :root:not([data-theme="light"]) { }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1b1e; --panel: #232428; --ink: #ececee; --muted: #9a9ba0;
+      --line: #32333a; --code: #2a2b31;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a1b1e; --panel: #232428; --ink: #ececee; --muted: #9a9ba0;
+    --line: #32333a; --code: #2a2b31;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.75 -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+          "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 56px 16px 96px; }
+  header { display: flex; align-items: center; gap: 18px; margin-bottom: 8px; }
+  header svg { width: 64px; height: 64px; flex: none; }
+  h1 { font-size: 26px; margin: 0 0 2px; letter-spacing: -.01em; }
+  .sub { color: var(--muted); font-size: 14px; }
+  .updated { color: var(--muted); font-size: 13px; margin: 28px 0 40px;
+             padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+  h2 { font-size: 19px; margin: 44px 0 14px; letter-spacing: -.01em; }
+  p { margin: 0 0 16px; }
+  a { color: var(--brand); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { width: 100%; border-collapse: collapse; margin: 20px 0 24px; font-size: 15px; }
+  th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line);
+           vertical-align: top; }
+  th { background: var(--panel); font-weight: 600; white-space: nowrap; }
+  code { background: var(--code); padding: 2px 6px; border-radius: 5px;
+         font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .88em; }
+  .note { background: var(--panel); border-left: 3px solid var(--brand);
+          padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 24px 0; }
+  .note p:last-child { margin-bottom: 0; }
+  ul { padding-left: 22px; margin: 0 0 16px; }
+  li { margin-bottom: 8px; }
+  footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--line);
+           color: var(--muted); font-size: 13px; }
+  @media (max-width: 560px) {
+    .wrap { padding: 36px 16px 64px; }
+    header svg { width: 52px; height: 52px; }
+    h1 { font-size: 22px; }
+    th, td { padding: 9px 10px; font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="小宇宙跟读">
+    <defs><linearGradient id="sky" x1="30" y1="16" x2="96" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#16B0EA"/><stop offset=".52" stop-color="#49BCE0"/>
+      <stop offset="1" stop-color="#80C8DA"/></linearGradient></defs>
+    <g transform="translate(-1.16 0.88) scale(1.0181)">
+      <g transform="rotate(-24 64 61)"><path d="M7,61 a57,20.5 0 0 1 114,0" fill="none" stroke="#1D1D1F" stroke-width="6.5" stroke-linecap="round"/></g>
+      <circle cx="64" cy="62" r="43" fill="url(#sky)"/>
+      <g transform="rotate(-24 62 52)">
+        <rect x="40.5" y="40.7" width="43" height="8.5" rx="4.25" fill="#fff"/>
+        <rect x="40.5" y="54.8" width="24" height="8.5" rx="4.25" fill="#fff"/>
+      </g>
+      <g transform="rotate(-24 64 61)"><path d="M7,61 a57,20.5 0 0 0 114,0" fill="none" stroke="#1D1D1F" stroke-width="6.5" stroke-linecap="round"/></g>
+    </g>
+  </svg>
+  <div>
+    <h1>小宇宙跟读 · 隐私政策</h1>
+    <div class="sub">Chrome 浏览器扩展</div>
+  </div>
+</header>
+
+<div class="updated">最后更新：2026 年 10 月 20 日</div>
+
+<div class="note">
+  <p><strong>一句话版本：</strong>本扩展没有服务器，不收集你的任何数据。密钥、字幕缓存和界面偏好全部存在你自己的浏览器里，卸载即删除。</p>
+</div>
+
+<h2>我们收集什么</h2>
+<p>小宇宙跟读（以下简称「本扩展」）<strong>没有自己的服务器</strong>，不会收集、存储或接收你的任何数据。开发者无法看到你的密钥、你收听的内容，或任何识别结果。</p>
+<p>本扩展在你的浏览器本机保存以下内容：</p>
+<table>
+  <thead><tr><th>内容</th><th>存放位置</th><th>用途</th></tr></thead>
+  <tbody>
+    <tr><td>阿里云百炼 API Key</td><td><code>chrome.storage.local</code></td><td>向阿里云发起识别请求时作为身份凭证</td></tr>
+    <tr><td>已识别的字幕片段</td><td>IndexedDB</td><td>再次收听同一段时不重复识别</td></tr>
+    <tr><td>侧栏宽度、倍速、波形显隐</td><td><code>chrome.storage.local</code></td><td>记住你的界面设置</td></tr>
+  </tbody>
+</table>
+<p>以上数据全部存于你自己的浏览器中，卸载扩展即一并删除。</p>
+
+<h2>数据会发送到哪里</h2>
+<p>本扩展只向两个地方发起网络请求：</p>
+<p><strong>1. 小宇宙音频 CDN（<code>*.xyzcdn.net</code>）</strong><br>
+按 HTTP Range 请求你当前播放位置附近的音频片段，用于切片识别。不下载整集。</p>
+<p><strong>2. 阿里云百炼（<code>dashscope.aliyuncs.com</code> / <code>*.aliyuncs.com</code>）</strong><br>
+使用<strong>你自己的</strong> API Key，将上述音频片段上传并提交语音识别，再取回带时间戳的文字。这是识别服务的必要步骤。你的 API Key 仅作为请求的身份凭证发送给阿里云，不会发送给本扩展作者或任何其他方。</p>
+<p>阿里云对这部分数据的处理，适用阿里云自己的隐私政策：<a href="https://help.aliyun.com/document_detail/42425.html" target="_blank" rel="noopener">阿里云隐私权政策</a>。</p>
+<p>本扩展<strong>不包含</strong>任何统计、埋点、广告或第三方分析代码。</p>
+
+<h2>你的控制权</h2>
+<ul>
+  <li>随时在扩展设置中清空 API Key</li>
+  <li>卸载扩展会删除全部本地数据（密钥、缓存、偏好）</li>
+  <li>不填写 API Key 时，扩展不会向阿里云发起任何请求；播放器、波形、倍速等功能仍可正常使用</li>
+</ul>
+
+<h2>联系方式</h2>
+<p>如对本政策有疑问，请通过本仓库的 <a href="https://github.com/DawnLck/xiaoyuzhou-live-subtitle-privacy/issues" target="_blank" rel="noopener">GitHub Issues</a> 联系。</p>
+
+<h2>变更</h2>
+<p>本政策如有更新，会在本页面标注新的「最后更新」日期。</p>
+
+<footer>
+  本扩展为第三方个人作品，与小宇宙（Xiaoyuzhou FM）官方无关。
+</footer>
+
+</div>
+</body>
+</html>
