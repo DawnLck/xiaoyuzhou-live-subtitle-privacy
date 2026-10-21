@@ -83,10 +83,10 @@
   </div>
 </header>
 
-<div class="updated">最后更新：2026 年 10 月 20 日</div>
+<div class="updated">最后更新：2026 年 10 月 21 日（适用于 0.1.1 版）</div>
 
 <div class="note">
-  <p><strong>一句话版本：</strong>本扩展没有服务器，不收集你的任何数据。密钥、字幕缓存和界面偏好全部存在你自己的浏览器里，卸载即删除。</p>
+  <p><strong>一句话版本：</strong>本扩展没有服务器，不收集你的任何数据。密钥、字幕缓存、收藏和界面偏好全部存在你自己的浏览器里，卸载即删除。</p>
 </div>
 
 <h2>我们收集什么</h2>
@@ -97,16 +97,20 @@
   <tbody>
     <tr><td>阿里云百炼 API Key</td><td><code>chrome.storage.local</code></td><td>向阿里云发起识别请求时作为身份凭证</td></tr>
     <tr><td>已识别的字幕片段</td><td>IndexedDB</td><td>再次收听同一段时不重复识别</td></tr>
+    <tr><td>收藏的单集、关注的节目、摘录的句子</td><td><code>chrome.storage.local</code></td><td>在侧边栏收藏夹里回听和查找</td></tr>
+    <tr><td>收听断点（最近 200 期）</td><td><code>chrome.storage.local</code></td><td>「继续收听」，从上次停下的地方接着听</td></tr>
     <tr><td>侧栏宽度、倍速、波形显隐</td><td><code>chrome.storage.local</code></td><td>记住你的界面设置</td></tr>
   </tbody>
 </table>
 <p>以上数据全部存于你自己的浏览器中，卸载扩展即一并删除。</p>
 
 <h2>数据会发送到哪里</h2>
-<p>本扩展只向两个地方发起网络请求：</p>
-<p><strong>1. 小宇宙音频 CDN（<code>*.xyzcdn.net</code>）</strong><br>
-按 HTTP Range 请求你当前播放位置附近的音频片段，用于切片识别。不下载整集。</p>
-<p><strong>2. 阿里云百炼（<code>dashscope.aliyuncs.com</code> / <code>*.aliyuncs.com</code>）</strong><br>
+<p>本扩展只向以下地方发起网络请求：</p>
+<p><strong>1. 小宇宙音频与图片 CDN（<code>*.xyzcdn.net</code>）</strong><br>
+按 HTTP Range 请求你当前播放位置附近的音频片段，用于切片识别，不下载整集；侧边栏收藏夹会加载单集和节目的封面图。</p>
+<p><strong>2. 小宇宙网页（<code>www.xiaoyuzhoufm.com</code>）</strong><br>
+读取公开的单集页、节目页，获得标题、封面等信息；对你关注的节目，每 6 小时读取一次节目页，检查是否有新单集。这些请求<strong>不携带</strong>你的 Cookie 或登录状态，小宇宙看到的只是一次普通的公开页面访问。</p>
+<p><strong>3. 阿里云百炼（<code>dashscope.aliyuncs.com</code> / <code>*.aliyuncs.com</code>）</strong><br>
 使用<strong>你自己的</strong> API Key，将上述音频片段上传并提交语音识别，再取回带时间戳的文字。这是识别服务的必要步骤。你的 API Key 仅作为请求的身份凭证发送给阿里云，不会发送给本扩展作者或任何其他方。</p>
 <p>阿里云对这部分数据的处理，适用阿里云自己的隐私政策：<a href="https://help.aliyun.com/document_detail/42425.html" target="_blank" rel="noopener">阿里云隐私权政策</a>。</p>
 <p>本扩展<strong>不包含</strong>任何统计、埋点、广告或第三方分析代码。</p>
@@ -114,7 +118,8 @@
 <h2>你的控制权</h2>
 <ul>
   <li>随时在扩展设置中清空 API Key</li>
-  <li>卸载扩展会删除全部本地数据（密钥、缓存、偏好）</li>
+  <li>在侧边栏随时取消收藏、取消关注、删除摘录；取消关注后不再检查该节目的更新</li>
+  <li>卸载扩展会删除全部本地数据（密钥、缓存、收藏、偏好）</li>
   <li>不填写 API Key 时，扩展不会向阿里云发起任何请求；播放器、波形、倍速等功能仍可正常使用</li>
 </ul>
 
